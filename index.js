@@ -17,7 +17,7 @@ const app = express()
 const http = require('http').createServer(app)
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://spiffy-sherbet-f7bcba.netlify.app")
+  res.header("Access-Control-Allow-Origin", "https://spiffy-sherbet-f7bcba.netlify.app https://streamify-2-0-client.vercel.app/")
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
   next()
 })
@@ -25,7 +25,7 @@ app.use(function(req, res, next) {
 //const io = require('socket.io')(http, {cors: corsOptions})
 const io = require("socket.io")(http, {
   cors: {
-    origin: "https://spiffy-sherbet-f7bcba.netlify.app",
+    origins: ["https://spiffy-sherbet-f7bcba.netlify.app", "https://streamify-2-0-client.vercel.app"],
     methods: ["GET", "POST"]
   }
 });
