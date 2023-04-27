@@ -2,6 +2,7 @@ const whiteList = [
     'http://localhost:3000',
     'https://streamify-seven.vercel.app',
     'http://localhost:3001',
+    'https://spiffy-sherbet-f7bcba.netlify.app'
 ]
 
 const corsOptions = {
