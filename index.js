@@ -16,8 +16,11 @@ const { removeUserFromRoom, changelisteningOnThisDevice, addUserToRoom, findRoom
 const app = express()
 const http = require('http').createServer(app)
 const io = require('socket.io')(http, {
-    cors: { origin: "https://spiffy-sherbet-f7bcba.netlify.app/" }
- })
+  cors: {
+    origin: "https://spiffy-sherbet-f7bcba.netlify.app/",
+    methods: ["GET", "POST"]
+  }
+})
 const PORT = 5000
 
 // Cross Origin Resource Sharing
