@@ -14,7 +14,7 @@ const songRoute = require('./src/routes/songRoute')
 const { removeUserFromRoom, changelisteningOnThisDevice, addUserToRoom, findRoomWithUserName } = require("./users")
 
 const app = express()
-const http = require('http').createServer(app)
+const http = require('https').createServer(app)
 const io = require('socket.io')(http, {cors: {origin: "*"}})
 const PORT = 5000
 
