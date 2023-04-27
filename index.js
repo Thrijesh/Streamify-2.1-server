@@ -15,12 +15,7 @@ const { removeUserFromRoom, changelisteningOnThisDevice, addUserToRoom, findRoom
 
 const app = express()
 const http = require('http').createServer(app)
-const io = require('socket.io')(http, {
-  cors: {
-    origin: true,
-    methods: ["GET", "POST"]
-  }
-})
+const io = require('socket.io')(http, {cors: {origin: "*"}})
 const PORT = 5000
 
 // Cross Origin Resource Sharing
